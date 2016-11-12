@@ -252,4 +252,4 @@ function mode_disable_wp_emojicons() {
   // filter to remove TinyMCE emojis
   add_filter( 'tiny_mce_plugins', 'mode_disable_emojicons_tinymce' );
 }
-add_action( 'init', 'mode_disable_wp_emojicons' );
+// add_action( 'init', 'mode_disable_wp_emojicons' );
