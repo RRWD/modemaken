@@ -205,7 +205,7 @@ function mode_bol_ads() {
     ?>
     <section class="lees-tip">
         <div class="wrap">
-            <h2>Leestips</h2>
+            <h2 class=""screen-reader-text">Leestips</h2>
             <?php
 
             mode_display_ad( $rows[ $numbers[0] ], ' first' );
@@ -220,19 +220,23 @@ function mode_bol_ads() {
 }
 
 
-function  mode_display_ad( $rand_row, $first='' ) {
+/**
+ * Display Bol advertisement.
+ *
+ * @param $rand_row
+ * @param string $first
+ */
+function  mode_display_ad( $rand_row, $first = '' ) {
 
-    $title = $rand_row['mode_bol_titel']; // get the sub field value
-    $url = $rand_row['mode_bol_url']; // get the sub field value
-    $img_obj = $rand_row['mode_bol_img']; // get the sub field value
+    $url = $rand_row['mode_bol_url'];
+    $img_obj = $rand_row['mode_bol_img'];
     $id = $img_obj['ID'];
 
     $onclick = "__gaTracker('send', 'event', 'outbound-article', '" . $url . "', '');"
 
     ?>
-    <div class="one-third<?php echo $first; ?>">
-
-    <a href="<?php echo $url; ?>" onclick="<?php echo $onclick; ?>"><?php echo wp_get_attachment_image( $id, 'medium' ); ?></a>
+    <div class="one-third<?php echo esc_attr( $first ); ?>">
+    <a href="<?php echo esc_url( $url ) ; ?>" onclick="<?php echo $onclick; ?>"><?php echo wp_get_attachment_image( $id, 'medium' ); ?></a>
     </div>
     <?php
 
