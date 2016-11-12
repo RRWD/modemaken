@@ -1,0 +1,18 @@
+/**
+ * CSS for the Custom login page for Modemaken.nl
+ * August 2015
+ * @author   Rian Rietveld
+ * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
+ */
+
+.login h1 a {
+ 	background:url(../images/logo.png) 0 0 no-repeat;
+	width: 232px;
+	height: 91px;
+}
+
+.login p.oogv-login-intro {
+	margin-left: 8px;
+	text-align:center;
+	padding: 0 0 10px 0;
+}
