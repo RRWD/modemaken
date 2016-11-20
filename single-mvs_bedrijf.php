@@ -15,23 +15,23 @@ function mode_single_mvs_bedrijf() {
 
 	if ( get_field( 'acf_mm_bedrijf_address' ) ) {
 
-
-
  		while ( has_sub_field( 'acf_mm_bedrijf_address' ) ) {
 
  			if ( get_sub_field('straat') ) {
+
  				$variable = '<li>Adres: ' . get_sub_field('straat') . ", ";
 	 			$variable .= get_sub_field('postcode') . " ";
 	 			$term = get_term_by( 'id', get_sub_field('woonplaats'), 'modemaken_woonplaats' );
-	 			$variable .= $term->name . ", ";
+	 			$variable .= $term->name . " ";
 	 			$variable .= ucfirst( get_sub_field('land') ) . "</li>";
+
 	 			echo $variable;
 
-	 			if ( get_sub_field( 'telefoon' ) ) {
-					echo '<li>Telefoon: ' . get_sub_field( 'telefoon' ) . "</li>";
-				}
-
  			}
+
+		    if ( get_sub_field( 'telefoon' ) ) {
+			    echo '<li>Telefoon: ' . get_sub_field( 'telefoon' ) . "</li>";
+		    }
  		}
 
 	}
