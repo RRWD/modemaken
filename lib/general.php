@@ -49,6 +49,7 @@ function mode_add_woonplaats( $title ) {
 
             $place = rtrim( $place, ', ' );
 
+
             if ( ! empty (  $place ) ) {
                 $title .= ' in ' . $place;
             }
@@ -205,7 +206,7 @@ function mode_bol_ads() {
     ?>
     <section class="lees-tip">
         <div class="wrap">
-            <h2 class=""screen-reader-text">Leestips</h2>
+            <h2 class="screen-reader-text">Leestips</h2>
             <?php
 
             mode_display_ad( $rows[ $numbers[0] ], ' first' );
