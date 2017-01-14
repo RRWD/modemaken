@@ -820,37 +820,6 @@ img.alignright,
 	margin-bottom: 0;
 }
 
-
-.home-top-add {
-	position: relative;
-}
-
-.home-top-add img {
-	line-height: 1;
-}
-
-.home-top-add p {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-
-	padding: 10px;
-	margin: 0;
-	background: rgb(25, 25, 25);
-	background: rgba(25, 25, 25, .5);
-}
-
-.home-top-add p a {
-	color: #fff;
-	font-size: 20px;
-}
-
-.home-top-add p a:hover,
-.home-top-add p a:focus {
-	color: #fff;
-	text-decoration: underline;
-}
-
 /* # Widgets
 ---------------------------------------------------------------------------------------------------- */
 

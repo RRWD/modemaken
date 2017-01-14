@@ -221,14 +221,9 @@ function mode_get_main_ad_home() {
 
 			$url = $rand_row['mode_main_ad_link'];
 			$img_obj = $rand_row['mode_main_ad_img'];
-			$text = $rand_row['mode_main_ad_tekst'];
-
 			$id = $img_obj['ID'];
 
-			if ( ! empty ( $text ) ) {
-				?><p><a href="<?php echo $url; ?>" onclick="__gaTracker('send', 'event', 'outbound-article', '<?php echo $url ?>', '');"><?php echo $text; ?></a></p><?php
-			}
-			echo wp_get_attachment_image( $id, 'large' );
+            ?><p><a href="<?php echo $url; ?>" onclick="__gaTracker('send', 'event', 'outbound-article', '<?php echo $url ?>', '');"><?php echo wp_get_attachment_image( $id, 'large' ); ?></a></p><?php
 
 		}
 
