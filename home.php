@@ -162,18 +162,6 @@ function modemaken_main_cat_list() {
 		</div>
 	</div>
 
-
-	<div class="odd">
-		<div class="wrap">
-			<div class="first home-content">
-			<h2>Alle adressen voor zelfmaakmode in</h2>
-
-			<?php mode_list_cities_summary(); ?>
-
-			</div>
-		</div>
-	</div>
-
 	<div class="even">
 		<div class="wrap">
 			<div class="first home-content">
@@ -187,124 +175,7 @@ function modemaken_main_cat_list() {
 	<?php
 }
 
-function mode_list_cities_summary() {
-
-	$home = esc_url( home_url() );
-
-?>
-            <div class="one-third">
-                <h3>Drenthe</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/assen/">Assen</a>, </li><li><a href="<?php echo $home; ?>/plaats/emmen/">Emmen</a>, </li><li><a href="<?php echo $home; ?>/plaats/coevorden/">Coevorden</a>, </li><li><a href="<?php echo $home; ?>/plaats/hoogeveen/">Hoogeveen</a>, </li><li><a href="<?php echo $home; ?>/plaats/zuidlaren/">Zuidlaren</a>, </li><li><a href="<?php echo $home; ?>/plaats/gasselternijveenschemond/">Gasselternijveenschemond</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/drenthe/"> meer in Drenthe</a>...</li>
-                </ul>
-            </div>
-
-
-            <div class="one-third">
-                <h3>Flevoland</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/dronten/">Dronten</a>, </li><li><a href="<?php echo $home; ?>/plaats/almere/">Almere</a>, </li><li><a href="<?php echo $home; ?>/plaats/emmeloord/">Emmeloord</a>, </li><li><a href="<?php echo $home; ?>/plaats/lelystad/">Lelystad</a>, </li><li><a href="<?php echo $home; ?>/plaats/zeewolde/">Zeewolde</a>, </li><li><a href="<?php echo $home; ?>/plaats/marknesse/">Marknesse</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/flevoland/"> meer in Flevoland</a>...</li>
-                </ul>
-            </div>
-
-            <div class="one-third">
-                <h3>Friesland</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/leeuwarden/">Leeuwarden</a>, </li><li><a href="<?php echo $home; ?>/plaats/sneek/">Sneek</a>, </li><li><a href="<?php echo $home; ?>/plaats/buitenpost/">Buitenpost</a>, </li><li><a href="<?php echo $home; ?>/plaats/harlingen/">Harlingen</a>, </li><li><a href="<?php echo $home; ?>/plaats/lemmer/">Lemmer</a>, </li><li><a href="<?php echo $home; ?>/plaats/akkrum/">Akkrum</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/friesland/"> meer in Friesland</a>...</li>
-                </ul>
-            </div>
-
-            <div class="one-third">
-                <h3>Gelderland</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/arnhem/">Arnhem</a>, </li><li><a href="<?php echo $home; ?>/plaats/apeldoorn/">Apeldoorn</a>, </li><li><a href="<?php echo $home; ?>/plaats/nijmegen/">Nijmegen</a>, </li><li><a href="<?php echo $home; ?>/plaats/barneveld/">Barneveld</a>, </li><li><a href="<?php echo $home; ?>/plaats/renkum/">Renkum</a>, </li><li><a href="<?php echo $home; ?>/plaats/zevenaar/">Zevenaar</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/gelderland/"> meer in Gelderland</a>...</li>
-                </ul>
-            </div>
-
-
-            <div class="one-third">
-                <h3>Groningen</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/groningen/">Groningen</a>, </li><li><a href="<?php echo $home; ?>/plaats/winsum/">Winsum</a>, </li><li><a href="<?php echo $home; ?>/plaats/veendam/">Veendam</a>, </li><li><a href="<?php echo $home; ?>/plaats/delfzijl/">Delfzijl</a>, </li><li><a href="<?php echo $home; ?>/plaats/stadskanaal-provincie-groningen/">Stadskanaal</a>, </li><li><a href="<?php echo $home; ?>/plaats/blijham/">Blijham</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/provincie-groningen/"> meer in Provincie Groningen</a>...</li>
-                </ul>
-            </div>
-
-
-            <div class="one-third">
-                <h3>Limburg</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/maastricht/">Maastricht</a>, </li><li><a href="<?php echo $home; ?>/plaats/kerkrade/">Kerkrade</a>, </li><li><a href="<?php echo $home; ?>/plaats/roermond/">Roermond</a>, </li><li><a href="<?php echo $home; ?>/plaats/weert/">Weert</a>, </li><li><a href="<?php echo $home; ?>/plaats/venray/">Venray</a>, </li><li><a href="<?php echo $home; ?>/plaats/wittem/">Wittem</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/limburg/"> meer in Limburg</a>...</li>
-                </ul>
-            </div>
-
-
-            <div class="one-third">
-                <h3>Noord-Brabant</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/tilburg/">Tilburg</a>, </li><li><a href="<?php echo $home; ?>/plaats/breda/">Breda</a>, </li><li><a href="<?php echo $home; ?>/plaats/s-hertogenbosch/">'s-Hertogenbosch</a>, </li><li><a href="<?php echo $home; ?>/plaats/eindhoven/">Eindhoven</a>, </li><li><a href="<?php echo $home; ?>/plaats/helmond/">Helmond</a>, </li><li><a href="<?php echo $home; ?>/plaats/etten-leur/">Etten-Leur</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/noord-brabant/"> meer in Noord-Brabant</a>...</li>
-                </ul>
-            </div>
-
-            <div class="one-third">
-                <h3>Noord-Holland</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/amsterdam/">Amsterdam</a>, </li><li><a href="<?php echo $home; ?>/plaats/haarlem/">Haarlem</a>, </li><li><a href="<?php echo $home; ?>/plaats/alkmaar/">Alkmaar</a>, </li><li><a href="<?php echo $home; ?>/plaats/heiloo/">Heiloo</a>, </li><li><a href="<?php echo $home; ?>/plaats/purmerend/">Purmerend</a>, </li><li><a href="<?php echo $home; ?>/plaats/bussum/">Bussum</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/noord-holland/"> meer in Noord-Holland</a>...</li>
-                </ul>
-            </div>
-
-            <div class="one-third">
-                <h3>Overijssel</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/enschede/">Enschede</a>, </li><li><a href="<?php echo $home; ?>/plaats/hengelo/">Hengelo</a>, </li><li><a href="<?php echo $home; ?>/plaats/zwolle/">Zwolle</a>, </li><li><a href="<?php echo $home; ?>/plaats/wierden/">Wierden</a>, </li><li><a href="<?php echo $home; ?>/plaats/rijssen/">Rijssen</a>, </li><li><a href="<?php echo $home; ?>/plaats/borne/">Borne</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/overijssel/"> meer in Overijssel</a>...</li>
-                </ul>
-            </div>
-
-
-            <div class="one-third">
-                <h3>Utrecht</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/utrecht/">Utrecht</a>, </li><li><a href="<?php echo $home; ?>/plaats/amersfoort/">Amersfoort</a>, </li><li><a href="<?php echo $home; ?>/plaats/maarssen/">Maarssen</a>, </li><li><a href="<?php echo $home; ?>/plaats/nieuwegein/">Nieuwegein</a>, </li><li><a href="<?php echo $home; ?>/plaats/houten/">Houten</a>, </li><li><a href="<?php echo $home; ?>/plaats/zeist/">Zeist</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/provincie-utrecht/"> meer in Provincie Utrecht</a>...</li>
-                </ul>
-            </div>
-
-            <div class="one-third">
-                <h3>Zeeland</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/kerkwerve/">Kerkwerve</a>, </li><li><a href="<?php echo $home; ?>/plaats/vlissingen/">Vlissingen</a>, </li><li><a href="<?php echo $home; ?>/plaats/axel/">Axel</a>, </li><li><a href="<?php echo $home; ?>/plaats/middelburg/">Middelburg</a>, </li><li><a href="<?php echo $home; ?>/plaats/veere/">Veere</a>, </li><li><a href="<?php echo $home; ?>/plaats/aardenburg/">Aardenburg</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/zeeland/"> meer in Zeeland</a>...</li>
-                </ul>
-            </div>
-
-
-            <div class="one-third">
-                <h3>Zuid-Holland</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/rotterdam/">Rotterdam</a>, </li><li><a href="<?php echo $home; ?>/plaats/den-haag/">Den Haag</a>, </li><li><a href="<?php echo $home; ?>/plaats/zoetermeer-zuid-holland/">Zoetermeer</a>, </li><li><a href="<?php echo $home; ?>/plaats/gorinchem/">Gorinchem</a>, </li><li><a href="<?php echo $home; ?>/plaats/delft/">Delft</a>, </li><li><a href="<?php echo $home; ?>/plaats/pijnacker/">Pijnacker</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/zuid-holland/"> meer in Zuid-Holland</a>...</li>
-                </ul>
-            </div>
-
-
-            <div class="one-third">
-                <h3>Duitsland</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/dusseldorf/">Düsseldorf</a>, </li>
-                <li><a href="<?php echo $home; ?>/plaats/duitsland/"> meer in Duitsland</a>...</li>
-                </ul>
-            </div>
-
-
-            <div class="one-third">
-                <h3>Belgi&euml;</h3>
-                <ul>
-                <li><a href="<?php echo $home; ?>/plaats/mol/">Mol</a>, </li><li><a href="<?php echo $home; ?>/plaats/boutersem/">Boutersem (B)</a>, </li><li><a href="<?php echo $home; ?>/plaats/herentals-provincie-antwerpen-b/">Herentals</a>, </li><li><a href="<?php echo $home; ?>/plaats/oudenaarde/">Oudenaarde</a>, </li><li><a href="<?php echo $home; ?>/plaats/dilsen-stokkem/">Dilsen-Stokkem</a>, </li><li><a href="<?php echo $home; ?>/plaats/turnhout/">Turnhout</a>, </li>                    <li><a href="<?php echo $home; ?>/plaats/belgie/"> meer in Belgi&euml;</a>...</li>
-                </ul>
-            </div>
-
-
-
-    <?php
-
-}
-
+f
 /**
  *
  */
