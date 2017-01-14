@@ -175,7 +175,6 @@ function modemaken_main_cat_list() {
 	<?php
 }
 
-f
 /**
  *
  */
