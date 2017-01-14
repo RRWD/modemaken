@@ -11,7 +11,9 @@ function mode_single_mvs_bedrijf() {
 
 	global $post;
 
-	echo '<h2>Contactgegevens</h2><ul>';
+	echo '<h2>Contactgegevens</h2>';
+
+	echo '<ul class="mode-adres">';
 
 	if ( get_field( 'acf_mm_bedrijf_address' ) ) {
 
@@ -19,13 +21,11 @@ function mode_single_mvs_bedrijf() {
 
  			if ( get_sub_field('straat') ) {
 
- 				$variable = '<li>Adres: ' . get_sub_field('straat') . ", ";
-	 			$variable .= get_sub_field('postcode') . " ";
+ 				echo '<li>Adres: ' . get_sub_field('straat') . ", ";
+			    echo get_sub_field('postcode') . " ";
 	 			$term = get_term_by( 'id', get_sub_field('woonplaats'), 'modemaken_woonplaats' );
-	 			$variable .= $term->name . " ";
-	 			$variable .= ucfirst( get_sub_field('land') ) . "</li>";
-
-	 			echo $variable;
+			    echo esc_html( $term->name ) . " ";
+			    echo ucfirst( get_sub_field('land') ) . "</li>";
 
  			}
 
@@ -35,7 +35,6 @@ function mode_single_mvs_bedrijf() {
  		}
 
 	}
-
 
 	if ( get_field( 'e-mail' ) ) {
 		echo '<li>E-mail: <a href="mailto:' . get_field( 'e-mail' ) . '">' . get_field( 'e-mail' ) . "</a></li>";
@@ -57,8 +56,10 @@ function mode_single_mvs_bedrijf() {
 
     	while ( have_rows( 'sociale_media' ) ) : the_row();
 
-    		$onclick = "__gaTracker('send', 'event', 'outbound-article', '" . get_sub_field( 'website_sociale_media' )  . "', '" . get_sub_field( 'naam_sociale_media' ) . "-" . $post->post_name . "');";
-        	echo '<li><a href="' . get_sub_field( 'website_sociale_media' ) . '" onclick="' . $onclick . '">' . get_sub_field( 'naam_sociale_media' ) . "</a></li>";
+		    $sm = get_sub_field( 'naam_sociale_media' );
+
+    		$onclick = "__gaTracker('send', 'event', 'outbound-article', '" . get_sub_field( 'website_sociale_media' )  . "', '" . sanitize_title( $sm ) . "-" . $post->post_name . "');";
+        	echo '<li class="mode-sm ' . sanitize_title( $sm ) . '"><a href="' . get_sub_field( 'website_sociale_media' ) . '" onclick="' . $onclick . '">' . esc_html( $sm ) . "</a></li>";
 
     	endwhile;
 
@@ -68,17 +69,13 @@ function mode_single_mvs_bedrijf() {
     echo "</ul>";
 
     if ( ! empty ( $post->post_content ) ) {
-    	echo '<h2>Omschrijving</h2>';
+    	echo '<h2 class="first">Omschrijving</h2>';
     }
 
 	// Get thumbnail
 	if ( has_post_thumbnail( $post->ID ) ) {
     	echo get_the_post_thumbnail ( $post->ID, 'medium', array( 'class' => 'alignright' ) );
 	}
-
-	// content will be added after this
-
-
 
 }
 
@@ -102,7 +99,7 @@ function mode_single_mvs_bedrijf_map() {
 }
 
 add_filter('pre_get_posts', 'posts_for_current_author');
-function posts_for_current_author($query) {
+function posts_for_current_author( $query ) {
 	global $pagenow;
 
 	if( 'edit.php' != $pagenow || !$query->is_admin )
@@ -118,6 +115,8 @@ function posts_for_current_author($query) {
 add_action( 'genesis_entry_content', 'mode_single_cats', 21 );
 function mode_single_cats() {
 	global $post;
+
+	mode_bol_ads();
 
     ?>
 	<h2>Meer bij:</h2>
