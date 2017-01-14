@@ -187,15 +187,7 @@ function mode_do_post_image() {
     }
 }
 
-
-
-//add_action( 'genesis_before_footer', 'mode_bol_ads', 5 );
-add_action( 'genesis_entry_content', 'mode_bol_ads', 20 );
 function mode_bol_ads() {
-
-    if ( ! is_singular() ) {
-        return;
-    }
 
     $rows = get_field( 'mode_bol_ad', 'option' ); // get all the rows
 
