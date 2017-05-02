@@ -105,11 +105,6 @@ function mode_login_logo_url() {
     return home_url();
 }
 
-add_filter( 'login_message', 'mode_login_message' );
-function mode_login_message() {
-    return '<p class="oogv-login-intro">Beheer uw pagina op Modemaken.nl</p><p class="oogv-login-intro">Heeft u nog geen account op Modemaken.nl?<br /><a href="http://modemaken.nl/wp/aanmelden-wijzigen/">Meld uw bedrijf aan</a> voor een gratis pagina.</p>';
-}
-
 add_action( 'login_enqueue_scripts', 'mode_login_css' );
 function mode_login_css() {
 
