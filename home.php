@@ -156,13 +156,13 @@ function modemaken_main_cat_list() {
 		<div class="wrap">
 			<div class="first home-content">
 
-			<?php mode_bol_ads(); ?>
+			<?php mode_uitgelicht(); ?>
 
 			</div>
 		</div>
 	</div>
 
-	<div class="even">
+	<div class="odd">
 		<div class="wrap">
 			<div class="first home-content">
 
@@ -172,6 +172,15 @@ function modemaken_main_cat_list() {
 		</div>
 	</div>
 
+        <div class="even">
+            <div class="first home-content">
+
+				<?php mode_bol_ads(); ?>
+
+            </div>
+        </div>
+    </div>
+
 	<?php
 }
 
@@ -180,14 +189,12 @@ function modemaken_main_cat_list() {
  */
 function mode_uitgelicht() {
 
-?>
-
-		<h2 class="first">Uitgelicht</h2>
-		<ul class="mode-uitgelicht">
-
-		<?php
-
 		if ( have_rows( 'ads_bedrijven_home', 'option' ) ) {
+
+			?>
+            <h2 class="first">Uitgelicht</h2>
+		    <ul class="mode-uitgelicht">
+			<?php
 
 			while ( have_rows( 'ads_bedrijven_home', 'option' ) ) : the_row();
 
@@ -201,12 +208,9 @@ function mode_uitgelicht() {
 
 			endwhile;
 
+			?>	</ul> <?php
+
 		}
-		?>
-		</ul>
-
-
-<?php
 
 }
 
